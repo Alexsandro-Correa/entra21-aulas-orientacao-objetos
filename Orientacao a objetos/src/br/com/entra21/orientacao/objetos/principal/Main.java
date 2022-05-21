@@ -27,6 +27,9 @@ public class Main {
 		outroAluno.idade = 20;
 		
 		alunoTeste.responderChamada();
+		alunoTeste.responderChamada();
+		alunoTeste.responderChamada();
+		alunoTeste.responderChamada();
 		
 		/*
 		 * System.out.println("Qual o nome do aluno novato?");
