@@ -17,7 +17,7 @@ public class Aluno {
 	public byte responderChamada() {
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("O aluno " + this.nome + " está ai?");
+		System.out.println("O aluno " + this.nome + " está ai na " + Professor.instituicao + "?");
 		String resposta = input.next();
 		
 		if(resposta.equalsIgnoreCase("sim")){
