@@ -14,6 +14,10 @@ public class Aluno {
 				
 	}
 	
+	public Aluno(String nomeLaDeFora) {
+		this.nome = nomeLaDeFora;
+	}
+	
 	public byte responderChamada() {
 		
 		Scanner input = new Scanner(System.in);
