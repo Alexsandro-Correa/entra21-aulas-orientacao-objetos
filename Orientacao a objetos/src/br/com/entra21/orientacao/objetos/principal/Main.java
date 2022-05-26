@@ -7,6 +7,9 @@ import br.com.entra21.orientacao.objetos.principal.aula01.classes.Professor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Diretor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Funcionario;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Pessoa;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
 
 public class Main {
 
@@ -20,10 +23,11 @@ public class Main {
 		byte option;
 
 		do {
-			System.out.println("Escolha uma opção:");
+			System.out.println("Escolha uma opção:\n");
 			System.out.println("0 - Sair.");
 			System.out.println("1 - Aprender Classes.");
 			System.out.println("2 - Aprender Herança.");
+			System.out.println("3 - Polimorfismo.");
 			option = input.nextByte();
 			switch (option) {
 
@@ -37,6 +41,10 @@ public class Main {
 
 			case 2:
 				aprenderHeranca();
+				break;
+
+			case 3:
+				aprenderPolimorfismo();
 				break;
 
 			default:
@@ -120,5 +128,28 @@ public class Main {
 
 		Funcionario funcionario2 = new Funcionario("Fulano", (byte) 18, "078000000", "Junin", 4000.05f);
 		funcionario2.getCpf();
+	}
+
+	public static void aprenderPolimorfismo() {
+
+		//o padrão de polimorfismo para comportamentos(métodos) é herdar.
+		//a segunda forma do polimorfismo é fazer completamente os comportamentos(métodos) do meu jeito o que eu herdei.
+		//a terceira forma do polimorfismo é aproveitar a minha herança e fazer um diferencial.
+		
+		Atleta cr7 = new Atleta();
+		cr7.setName("Cristiano Ronaldo");
+		cr7.comemorarVitoria();
+		System.out.println("---------------------------\n");
+		
+		Nadador cesarCielo =  new Nadador("Cielo",(byte) 36, 30, 18,"Piscina", "Toca");
+		cesarCielo.comemorarVitoria(); //procura primeiro na minha classe Nadador, se não tiver busca na herança
+		cesarCielo.setName("Cielo");
+		System.out.println("---------------------------\n");
+		
+		Velocista usainBolt = new Velocista();
+		usainBolt.setMarcaCalcado("Nike");
+		usainBolt.setName("Bolt");
+		usainBolt.comemorarVitoria();
+		System.out.println("---------------------------\n");
 	}
 }
