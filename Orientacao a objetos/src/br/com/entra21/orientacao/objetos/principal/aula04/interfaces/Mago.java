@@ -26,6 +26,7 @@ public class Mago implements Carta {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+		System.out.println(nome);
 	}
 
 
@@ -60,8 +61,6 @@ public class Mago implements Carta {
 		
 	}
 	
-	public void nomeCarta() {
-		System.out.println(nome);
-	}
+	
 
 }

@@ -13,6 +13,7 @@ public class Dragao implements Carta {
 	public Dragao(String nome) {
 		super();
 		this.nome = nome;
+		
 	}
 
 	
@@ -26,6 +27,7 @@ public class Dragao implements Carta {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+		System.out.println(nome);
 	}
 
 
@@ -60,8 +62,6 @@ public class Dragao implements Carta {
 		
 	}
 	
-	public void nomeCarta() {
-		System.out.println(nome);
-	}
+	
 
 }

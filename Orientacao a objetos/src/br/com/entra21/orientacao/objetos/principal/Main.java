@@ -237,8 +237,8 @@ public class Main {
 	
 	public static void exercicioInterface() {
 		
-		Dragao blueEyes = new Dragao("Blue Eyes White Dragon");
-		blueEyes.nomeCarta();
+		Dragao blueEyes = new Dragao();
+		blueEyes.setNome("Blue Eyes White Dragon");
 		blueEyes.atributo("Luz");
 		blueEyes.tipo("Dragão");
 		blueEyes.atk((short) 3000);
@@ -246,8 +246,8 @@ public class Main {
 		blueEyes.descricao("Monstro Normal:");
 		System.out.println("\n");
 		
-		Mago darkMagician = new Mago("Dark Magician");
-		darkMagician.nomeCarta();
+		Mago darkMagician = new Mago();
+		darkMagician.setNome("Dark Magician");
 		darkMagician.atributo("Trevas");
 		darkMagician.tipo("Mago");
 		darkMagician.atk((short) 2500);
