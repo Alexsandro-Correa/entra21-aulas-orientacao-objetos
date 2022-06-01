@@ -41,6 +41,7 @@ public class Main {
 			System.out.println("4 - Aprender Conceitos POO.");
 			System.out.println("5 - Aprender Polimorfismo com Interface.");
 			System.out.println("6 - Exercíco POO");
+			System.out.println("7 - Revisão");
 			option = input.nextByte();
 			switch (option) {
 
@@ -70,6 +71,10 @@ public class Main {
 				
 			case 6:
 				exercicioInterface();
+				break;
+				
+			case 7:
+				revisarPOO();
 				break;
 
 			default:
@@ -256,4 +261,8 @@ public class Main {
 		System.out.println("\n");
 	}
 
+	public static void revisarPOO() {
+		
+		Revisao.revisar();
+	}
 }
